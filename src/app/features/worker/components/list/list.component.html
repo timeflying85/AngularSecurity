@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th>#id</th>
+            <th>Lastname</th>
+            <th>Firstname</th>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let worker of Workers">
+            <td>{{ worker.id }}</td>
+            <td>{{ worker.lastname }}</td>
+            <td>{{ worker.firstname }}</td>
+            <td>{{ worker.department }}</td>
+            <td>
+                <button class="btn btn-danger" (click)="remove(worker.id)">Remove</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

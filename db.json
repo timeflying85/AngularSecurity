@@ -1,0 +1,23 @@
+{
+  "workers": [
+    {
+      "firstname": "Flavian",
+      "lastname": "Ovyn",
+      "department": "IT",
+      "id": 1
+    },
+    {
+      "firstname": "Flavian",
+      "lastname": "Ovyn2",
+      "department": "IT-Blop",
+      "id": 2
+    },
+    {
+      "firstname": "Flavian",
+      "lastname": "Ovyn3",
+      "department": "IT-KLOP",
+      "id": 3
+    }
+  ],
+  "timesheets": []
+}

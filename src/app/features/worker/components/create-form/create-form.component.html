@@ -1,0 +1,16 @@
+<form [formGroup]="createForm" (ngSubmit)="handleSubmit()">
+    <div class="input-field">
+        <label for="lastname" class="active">Lastname</label>
+        <input name="lastname" formControlName="lastname">
+    </div>
+    <div class="input-field">
+        <label for="firstname" class="active">Firstname</label>
+        <input name="firstname" formControlName="firstname">
+    </div>
+    <div class="input-field">
+        <label for="department" class="active">Department</label>
+        <input name="department" formControlName="department">
+    </div>
+
+    <button type="submit" class="btn btn-success">Add</button>
+</form>
