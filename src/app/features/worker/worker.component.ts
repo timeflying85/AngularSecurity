@@ -37,6 +37,16 @@ export class WorkerComponent implements OnDestroy {
     this.subs$$.push(sub)
   }
 
+  handleRemove(id: number) {
+    const copy = [...this.workers]
+    const index = copy.findIndex(it => it.id === id)
+    copy.splice(index, 1)
+
+    this.workers = [...copy]
+
+    this.$worker.remove(id)
+  }
+
   private createNext(entity: WorkerEntity) {
     // const workers = []
 

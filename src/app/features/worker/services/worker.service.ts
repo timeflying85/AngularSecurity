@@ -27,4 +27,8 @@ export class WorkerService {
         take(1)
       )
   }
+
+  remove(id: number) {
+    this.$http.delete(`${this.baseUri}/workers/${id}`).subscribe(deleted => console.log(deleted))
+  }
 }

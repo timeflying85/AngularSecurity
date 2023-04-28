@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { WorkerEntities } from '../../models/worker.model'
 
 @Component({
@@ -8,9 +8,7 @@ import { WorkerEntities } from '../../models/worker.model'
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ListComponent {
-  remove(_t13: number) {
-    throw new Error('Method not implemented.');
-  }
+  @Output('remove') removeEvent = new EventEmitter<number>()
   private workers: WorkerEntities = []
 
   @Input('workers') set Workers(workers: WorkerEntities) {
@@ -19,5 +17,8 @@ export class ListComponent {
   get Workers(): WorkerEntities { return this.workers }
 
 
+  remove(id: number) {
+    this.removeEvent.emit(id)
+  }
 
 }

@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col s6">
-        <worker-list [workers]="workers"></worker-list>
+        <worker-list [workers]="workers" (remove)="handleRemove($event)"></worker-list>
     </div>
     <div class="col s6">
         <worker-create-form (create)="handleCreate($event)"></worker-create-form>
